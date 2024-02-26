@@ -46,9 +46,11 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.core:core-splashscreen:1.0.0")
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("com.google.firebase:firebase-auth-ktx:22.3.1")
+    //splash screen
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     // navigation
     val nav_version = "2.7.5"
