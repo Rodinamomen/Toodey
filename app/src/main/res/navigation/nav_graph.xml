@@ -6,12 +6,15 @@
     app:startDestination="@id/signInFragment">
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.example.todo.authentication.signup.signupFragment"
+        android:name="com.example.todo.authentication.signup.view.signupFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" >
         <action
             android:id="@+id/action_signupFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -21,5 +24,13 @@
         <action
             android:id="@+id/action_signInFragment_to_signupFragment"
             app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todo.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>
