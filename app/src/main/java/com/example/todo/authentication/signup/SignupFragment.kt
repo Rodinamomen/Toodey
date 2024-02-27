@@ -1,21 +1,16 @@
 package com.example.todo.authentication.signup
 
 import android.os.Bundle
-import android.os.PatternMatcher
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.todo.R
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
-import com.google.android.gms.auth.api.identity.SignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseApp
@@ -28,8 +23,7 @@ class signupFragment : Fragment() {
     private lateinit var emailEt: TextInputLayout
     private lateinit var passwordEt: TextInputLayout
     private lateinit var signupBtn: Button
-    private lateinit var signupGoogleBtn: Button
- //   private lateinit var onTapSentClient : SignInClient
+    private lateinit var signinTv: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,9 +39,9 @@ class signupFragment : Fragment() {
         emailEt= view.findViewById(R.id.et_email)
         passwordEt= view.findViewById(R.id.et_password)
         signupBtn = view.findViewById(R.id.btn_signup)
-        signupGoogleBtn = view.findViewById(R.id.btn_google_signup)
-        signupGoogleBtn.setOnClickListener {
-
+        signinTv= view.findViewById(R.id.tv_sign_in)
+        signinTv.setOnClickListener {
+            findNavController().navigate(R.id.action_signupFragment_to_signInFragment)
         }
         signupBtn.setOnClickListener {
             if(checkAllFields(emailEt, passwordEt)){
