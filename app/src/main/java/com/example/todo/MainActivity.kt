@@ -8,6 +8,10 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        lifecycleScope.launch{
+            delay(50000)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
