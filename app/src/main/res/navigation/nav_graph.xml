@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.todo.authentication.login.SignInFragment"
+        android:name="com.example.todo.authentication.signin.view.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action

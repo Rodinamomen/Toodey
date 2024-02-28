@@ -1,4 +1,4 @@
-package com.example.todo.authentication.login
+package com.example.todo.authentication.signin.view
 
 import android.os.Bundle
 import android.util.Patterns
@@ -11,10 +11,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.todo.R
-import com.example.todo.authentication.login.viewmodel.SignInViewmodel
+import com.example.todo.authentication.signin.viewmodel.SignInViewmodel
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 
 
