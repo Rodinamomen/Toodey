@@ -51,6 +51,8 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("com.google.firebase:firebase-auth-ktx:22.3.1")
     implementation("com.google.firebase:firebase-firestore")
+    //crashlytics
+    //implementation("com.google.firebase:firebase-crashlytics")
     //splash screen
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     // navigation
