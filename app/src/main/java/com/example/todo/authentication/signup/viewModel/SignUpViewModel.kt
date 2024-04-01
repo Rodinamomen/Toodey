@@ -31,14 +31,16 @@ class SignUpViewModel(val context:Context) : ViewModel(){
                             "userFullName" to fullName
                         )
                         firebaseDatabase.collection("Users")
-                            .add( hashMapOf(
+                            .document(user!!.uid)
+                            .set(hashMapOf(
                                 "userEmail" to user?.email,
                                 "userFullName" to fullName,
                                 "userId" to user?.uid
-                            )).addOnSuccessListener { documentReference ->
+                            ))
+                           .addOnSuccessListener {
                                 _userAdded.value= true
                             }
-                            .addOnFailureListener { e ->
+                            .addOnFailureListener {
                                 _userAdded.value= false
                             }
                     }

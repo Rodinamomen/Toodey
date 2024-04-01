@@ -30,6 +30,8 @@
     <string name="priority_2">Priority task 2</string>
     <string name="priority_3">Priority task 3</string>
     <string name="priority_4">Priority task 4</string>
+    <string name="task_name_example">eg : Meeting with client</string>
+    <string name="task_description">Description</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

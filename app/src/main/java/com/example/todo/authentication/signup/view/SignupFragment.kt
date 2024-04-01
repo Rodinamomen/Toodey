@@ -71,7 +71,7 @@ class signupFragment : Fragment() {
         }
     }
     private fun checkAllFields(emailEt :TextInputLayout, passwordEt: TextInputLayout, fullNameEt: TextInputLayout, reEnterPasswordEt: TextInputLayout): Boolean{
-         var email = emailEt.editText?.text.toString()
+        var email = emailEt.editText?.text.toString()
         if(email==""){
             emailEt.error = "This field is required"
             return false
